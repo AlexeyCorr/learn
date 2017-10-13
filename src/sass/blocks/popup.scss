@@ -1,0 +1,150 @@
+@keyframes  visibility {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  overflow: hidden;
+  text-align: center;
+
+  display: none;
+  width: 320px;
+  padding-bottom: 45px;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 5px #c6c6c6;
+
+  &--visibility {
+    display: block;
+    animation-name: visibility;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.popup__title {
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+
+  margin: 0;
+  padding: 0 85px;
+  padding-top: 35px;
+  padding-bottom: 25px;
+}
+
+.popup__text {
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.popup__size {
+  display: block;
+  font: inherit;
+  font-size: 17px;
+  line-height: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: bottom;
+  font-weight: 700;
+
+  width: 78px;
+  height: 48px;
+
+  border: 2px solid #ececec;
+  cursor: pointer;
+}
+
+.popup__input + .popup__size {
+
+  &:hover,
+  &:focus {
+    border-color: #c7c7c7;
+  }
+
+  &:active {
+    border-color: #63d1bb;
+  }
+
+  &--active {
+    border-color: #c7c7c7;
+  }
+}
+
+.popup__input:checked + .popup__size {
+  border-color: #63d1bb;
+}
+
+.popup__field-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 260px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.popup__button {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  width: 260px;
+  padding: 15px 85px;
+  border: 2px solid #63d1bb;
+  background-color: #63d1bb;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: #000000;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media ($tablet-width) {
+  .popup {
+    width: 566px;
+  }
+  .popup__title {
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .popup__text {
+    font-size: 17px;
+  }
+
+  .popup__field-wrapper {
+    width: 350px;
+  }
+
+  .popup__size {
+    width: 108px;
+  }
+
+  .popup__button {
+    width: 350px;
+  }
+}

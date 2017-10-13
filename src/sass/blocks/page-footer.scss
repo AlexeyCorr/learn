@@ -1,1 +1,40 @@
+.page-footer {
+  min-width: 320px;
+  background-color: #f1f1f1;
+}
 
+.page-footer__logo {
+  display: none;
+}
+
+@media ($tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 0;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__logo-link {
+    display: block;
+    width: 102px;
+    height: 35px;
+    cursor: pointer;
+  }
+
+  .page-footer__logo-link svg {
+    &:hover,
+    &:focus {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: #cae6e2;
+    }
+  }
+}

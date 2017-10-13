@@ -1,0 +1,53 @@
+.logo {
+  padding: 22px 0;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.logo__link {
+  display: block;
+  width: 86px;
+  height: 35px;
+  margin: 0 auto;
+}
+
+.logo__link[href] {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media ($tablet-width) {
+  .logo {
+    width: 45%;
+    padding: 22px 0;
+    border: none;
+    order: 1;
+  }
+
+  .logo__link {
+    margin: 0;
+    width: 112px;
+    height: 46px;
+    border: none;
+  }
+}
+
+
+@media ($desktop-width) {
+  .logo {
+    width: 150px;
+    padding: 9px 0px;
+    order: 2;
+  }
+
+  .logo__link {
+    width: 149px;
+    height: 72px;
+  }
+}

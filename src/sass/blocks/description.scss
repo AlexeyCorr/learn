@@ -1,0 +1,150 @@
+.description__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: left;
+  color: #000000;
+
+  margin: 0;
+  padding: 27px 30px;
+  padding-bottom: 24px;
+}
+
+.description__list {
+  @include style-reset();
+
+  font-size: 16px;
+  text-align: left;
+  font-weight: 700;
+  color: #000000;
+}
+
+.description__item {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 100px;
+  padding-top: 51px;
+  padding-bottom: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 38px;
+
+    width: 33px;
+    height: 37px;
+
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+  }
+
+  &:nth-child(1)::before {
+    background-image: url("../img/icon-feature1.svg");
+  }
+
+  &:nth-child(2)::before {
+    width: 45px;
+    left: 32px;
+    background-image: url("../img/icon-feature3.svg");
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../img/icon-feature5.svg");
+  }
+}
+
+.description__list--right .description__item {
+  padding-right: 55px;
+
+  &:nth-child(1)::before {
+    left: 35px;
+    background-image: url("../img/icon-feature2.svg");
+  }
+
+  &:nth-child(2)::before {
+    width: 50px;
+    left: 27px;
+    background-image: url("../img/icon-feature4.svg");
+  }
+
+  &:nth-child(3)::before {
+    left: 34px;
+    background-image: url("../img/icon-feature6.svg");
+  }
+}
+
+@media ($tablet-width) {
+  .description {
+    padding: 0;
+  }
+
+  .description__title {
+    font-size: 40px;
+    line-height: 50px;
+
+    padding: 45px 0;
+  }
+
+  .description__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 19px;
+  }
+
+  .description__list {
+    font-size: 20px;
+  }
+
+  .description__list .description__item {
+    padding-left: 0;
+    padding-right: 75px;
+    padding-bottom: 60px;
+
+    &::before {
+      left: 0px;
+    }
+  }
+
+  .description__list--right .description__item {
+    padding-right: 35px;
+
+    &:nth-child(1)::before {
+      left: 0;
+    }
+
+    &:nth-child(2)::before {
+      left: 0;
+    }
+
+    &:nth-child(3)::before {
+      left: 0;
+    }
+  }
+}
+
+@media ($desktop-width) {
+
+  .description__title {
+    font-size: 50px;
+    line-height: 57px;
+
+    padding-top: 52px;
+    padding-bottom: 45px;
+    padding-left: 175px;
+  }
+
+  .description__wrapper {
+    padding-left: 175px;
+    padding-right: 200px;
+  }
+
+  .description__item {
+    padding-right: 140px;
+  }
+
+  .description__list--right .description__item {
+    padding-right: 0;
+  }
+}

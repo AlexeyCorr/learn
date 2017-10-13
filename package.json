@@ -8,7 +8,8 @@
     "url": "git+https://github.com/AlexeyCorr/learn.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp dev"
   },
   "author": "",
   "license": "ISC",

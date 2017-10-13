@@ -1,9 +1,21 @@
 @import "./src/sass/base/normalize.scss";
 @import "./src/sass/base/variables.scss";
 @import "./src/sass/base/mixins.scss";
+@import "./src/sass/base/scaffolding.scss";
 
 @import "./src/sass/global/fonts.scss";
 
+@import "./src/sass/blocks/logo.scss";
 @import "./src/sass/blocks/page-header.scss";
-@import "./src/sass/blocks/main.scss";
+@import "./src/sass/blocks/menu.scss";
+@import "./src/sass/blocks/products.scss";
+@import "./src/sass/blocks/button.scss";
+@import "./src/sass/blocks/product-best.scss";
+@import "./src/sass/blocks/description.scss";
+@import "./src/sass/blocks/reviews.scss";
+@import "./src/sass/blocks/contacts.scss";
 @import "./src/sass/blocks/page-footer.scss";
+@import "./src/sass/blocks/social.scss";
+@import "./src/sass/blocks/copyright.scss";
+@import "./src/sass/blocks/popup.scss";
+@import "./src/sass/blocks/blackout.scss";
