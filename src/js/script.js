@@ -42,7 +42,6 @@ function initMap() {
     position: {lat: 59.936280, lng: 30.321580},
     map: myMap,
     icon: "/img/icon-map-pin.svg"
-
   });
 
   var InfoWindow = new google.maps.InfoWindow({

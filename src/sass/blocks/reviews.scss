@@ -97,8 +97,8 @@
     background-position: left top;
 
     &::after {
-      height: 17px;
-      background-size: cover;
+      height: 23px;
+      background-size: auto;
     }
   }
 
@@ -148,7 +148,7 @@
     background-position-x: 50px;
 
     &::after {
-      height: 28px;
+      height: 30px;
     }
   }
 

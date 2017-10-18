@@ -124,15 +124,14 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      z-index: 1;
+      z-index: 2;
 
       width: 100%;
-      height: 22px;
+      height: 24px;
 
       background-image: url("../img/zigzag-fill.svg");
-      background-size: cover;
       background-repeat: repeat-x;
-      background-position-y: 5px;
+      background-size: 800px 25px;
     }
   }
 
@@ -150,8 +149,11 @@
   }
 
   .products__link-toy {
+    font-size: 20px;
+    line-height: 30px;
+
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 35px;
 
     &:after {
       right: 35px;
@@ -160,8 +162,11 @@
   }
 
   .products__link-interior {
+    font-size: 20px;
+    line-height: 30px;
+
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 35px;
 
     &:after {
       top: 30px;
@@ -197,7 +202,8 @@
     padding-bottom: 15px;
 
     &::after {
-      height: 38px;
+      height: 34px;
+      background-size: 1150px 40px;
     }
   }
 
@@ -213,7 +219,8 @@
 
   .products__link-interior,
   .products__link-toy {
-    padding: 35px;
+    padding: 30px;
+    padding-left: 40px;
     padding-right: 350px;
   }
 }

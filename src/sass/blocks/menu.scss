@@ -9,14 +9,15 @@
 
 .menu__toggle {
   position: absolute;
-  right: 21px;
-  top: 29px;
+  right: 0px;
+  top: 0px;
   z-index: 2;
 
   display: block;
-  width: 30px;
-  height: 20px;
+  width: 80px;
+  height: 79px;
   border: none;
+  padding: 0;
 
   cursor: pointer;
   background-color: transparent;
@@ -25,8 +26,8 @@
 .menu--closed .menu__toggle::before {
   content: "";
   position: absolute;
-  right: 9px;
-  top: 3px;
+  right: 30px;
+  top: 30px;
 
   width: 20px;
   height: 2px;
@@ -50,8 +51,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 9px;
-    right: 5px;
+    right: 26px;
+    top: 38px;
 
     width: 27px;
     height: 2px;
@@ -77,6 +78,15 @@
   &:active::before,
   &:active::after {
     background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
+
+  &:active::before {
+    transform: rotate(-45deg);
+  }
+
+  &:active::after {
+    transform: rotate(45deg);
   }
 }
 
@@ -128,33 +138,6 @@
   color: #000000;
   text-align: left;
   cursor: pointer;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    cursor: pointer;
-
-    width: 18px;
-    height: 18px;
-
-    background-image: url("../img/icon-search.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 1;
-    filter: grayscale(100%);
-  }
-}
-
-.menu__link-search:hover::before,
-.menu__link-search:focus::before {
-  filter: grayscale(0%);
-}
-
-.menu__link-search:active::before {
-  filter: grayscale(0%);
-  opacity: 0.5;
 }
 
 .menu__link-cart {
@@ -169,33 +152,37 @@
   color: #000000;
   text-align: left;
   cursor: pointer;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    cursor: pointer;
-
-    width: 18px;
-    height: 18px;
-
-    background-image: url("../img/icon-cart.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 1;
-    filter: grayscale(100%);
-  }
 }
 
-.menu__link-cart:hover::before,
-.menu__link-cart:focus::before {
-  filter: grayscale(0%);
+.menu__link-icon {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+
+  fill: #000000;
+  opacity: 0.2;
 }
 
-.menu__link-cart:active::before {
-  filter: grayscale(0%);
-  opacity: 0.5;
+.menu__link-cart:hover .menu__link-icon,
+.menu__link-cart:focus .menu__link-icon {
+  fill: #63d1bb;
+  opacity: 1;
+}
+
+.menu__link-cart:active .menu__link-icon {
+  fill: #63d1bb;
+  opacity: 0.3;
+}
+
+.menu__link-search:hover .menu__link-icon,
+.menu__link-search:focus .menu__link-icon {
+  fill: #63d1bb;
+  opacity: 1;
+}
+
+.menu__link-search:active .menu__link-icon {
+  fill: #63d1bb;
+  opacity: 0.3;
 }
 
 @media ($mobile-width-only) {
