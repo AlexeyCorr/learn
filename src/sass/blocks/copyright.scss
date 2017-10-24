@@ -26,9 +26,12 @@
   }
 }
 
-.copyright__link svg {
-  &:hover,
-  &:focus {
+.copyright__icon {
+  width: 27px;
+  height: 34px;
+}
+
+.copyright__link:hover .copyright__icon,
+.copyright__link:focus .copyright__icon {
     fill: #46c1ae;
-  }
 }

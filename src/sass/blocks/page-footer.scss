@@ -20,14 +20,14 @@
     display: block;
   }
 
-  .page-footer__logo-link {
+  .page-footer__logo-link[href] {
     display: block;
     width: 102px;
     height: 35px;
     cursor: pointer;
   }
 
-  .page-footer__logo-link svg {
+  .page-footer__logo-link[href] svg {
     &:hover,
     &:focus {
       fill: #46c1ae;

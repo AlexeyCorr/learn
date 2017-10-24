@@ -28,14 +28,15 @@
   background-color: transparent;
 }
 
-.social__link svg {
+.social__icon {
   &:hover,
   &:focus {
     fill: #46c1ae;
   }
 
   &:active {
-    fill: #cae6e2;
+    fill: #46c1ae;
+    opacity: 0.5;
   }
 }
 
@@ -43,5 +44,9 @@
   .social {
     padding-left: 157px;
     padding-right: 83px;
+  }
+
+  .social__list {
+    border: none;
   }
 }

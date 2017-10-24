@@ -1,9 +1,5 @@
 var navMain = document.querySelector(".menu");
 var navToggle = document.querySelector(".menu__toggle");
-var link = document.querySelector(".popup--button");
-var popup = document.querySelector(".popup");
-var blackout = document.querySelector(".blackout--none");
-var sizeInput = popup.querySelector(".popup__input");
 
 navMain.classList.remove("menu--nojs");
 
@@ -19,6 +15,11 @@ navToggle.addEventListener("click", function(evt) {
   }
 });
 
+var link = document.querySelector(".popup--button");
+var popup = document.querySelector(".popup");
+var blackout = document.querySelector(".blackout--none");
+var sizeInput = popup.querySelector(".popup__input");
+
 link.addEventListener("click", function(evt) {
     evt.preventDefault();
     popup.classList.add("popup--visibility");
@@ -31,17 +32,32 @@ blackout.addEventListener("click", function(evt) {
   blackout.classList.remove("blackout");
 });
 
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (popup.classList.contains("popup--visibility")) {
+      popup.classList.remove("popup--visibility");
+      popup.classList.remove("blackout");
+    }
+  }
+});
+
 function initMap() {
   var element = document.querySelector(".contacts__map--top");
   var options = {
       zoom: 15,
       center: {lat: 59.936280, lng: 30.321580}
   };
+
+  var image = {
+    url: "/img/icon-map-pin.svg",
+    scaledSize: new google.maps.Size(66, 100)
+  };
   var myMap = new google.maps.Map(element, options);
   var marker = new google.maps.Marker({
     position: {lat: 59.936280, lng: 30.321580},
     map: myMap,
-    icon: "/img/icon-map-pin.svg"
+    optimized: false,
+    icon: image
   });
 
   var InfoWindow = new google.maps.InfoWindow({
