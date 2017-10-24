@@ -159,6 +159,7 @@
   }
   .production__wrapper {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .production__title {
@@ -180,7 +181,7 @@
   }
 
   .production__wideo {
-    width: 682px;
+    width: 680px;
     height: 455px;
   }
 
@@ -194,5 +195,7 @@
     padding-right: 55px;
     padding-left: 80px;
     padding-bottom: 50px;
+    box-sizing: border-box;
+    width: 380px;
   }
 }

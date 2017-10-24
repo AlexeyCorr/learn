@@ -143,7 +143,7 @@
           <div class="production__wrapper-text">
             <h2 class="production__title production__title--desktop">Процесс производства</h2>
             <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="button" href="#">Сделать заказ</a>
+            <a class="button popup--button" href="#">Сделать заказ</a>
           </div>
         </div>
       </section>
@@ -197,6 +197,29 @@
         </div>
       </div>
     </footer>
+
+    <section class="popup">
+      <h2 class="popup__title">Добавить в корзину</h2>
+     <form class="popup__form" action="#" method="get">
+       <p class="popup__text">Выберите размер:</p>
+       <div class="popup__field-wrapper">
+         <label class="popup__label">
+           <input class="popup__input visually-hidden" type="radio" name="size" value="s" checked>
+           <span class="popup__size">s</span>
+         </label>
+         <label class="popup__label">
+           <input class="popup__input visually-hidden" type="radio" name="size" value="m">
+           <span class="popup__size">m</span>
+         </label>
+         <label class="popup__label">
+           <input class="popup__input visually-hidden" type="radio" name="size" value="l">
+           <span class="popup__size">l</span>
+         </label>
+       </div>
+       <button class="popup__button">Добавить</button>
+     </form>
+    </section>
+    <div class="blackout--none"></div>
 
     <script src="js/script.min.js"></script>
   </body>

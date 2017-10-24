@@ -22,6 +22,12 @@
   background-size: 100%;
 }
 
+@media (min-resolution: 1.5dppx) {
+  .products__title {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
+}
+
 .products__list {
   @include style-reset();
 
