@@ -33,13 +33,6 @@
     "gulp-jsmin": "^0.1.5",
     "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-svgstore": "^6.1.0",
-    "css-mqpacker": "^6.0.1",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-imagemin": "^3.4.0",
-    "gulp-jsmin": "^0.1.5",
-    "gulp-postcss": "^7.0.0",
-    "gulp-rename": "^1.2.2",
     "gulp-svgstore": "^6.1.0"
   }
 }
